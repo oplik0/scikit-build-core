@@ -30,8 +30,8 @@ classifiers = [
     "Development Status :: 4 - Beta",
     "Typing :: Typed",
 ]
-
-dynamic = ["version"]
+version = "0.11.7
+# dynamic = ["version"]
 
 dependencies = [
     "exceptiongroup >=1.0; python_version<'3.11'",
@@ -123,9 +123,9 @@ Issues = "https://github.com/scikit-build/scikit-build-core/issues"
 "validate_pyproject.tool_schema".scikit-build = "scikit_build_core.settings.skbuild_schema:get_skbuild_schema"
 hatch.scikit-build = "scikit_build_core.hatch.hooks"
 
-[tool.hatch]
-version.source = "vcs"
-build.hooks.vcs.version-file = "src/scikit_build_core/_version.py"
+# [tool.hatch]
+# version.source = "vcs"
+# build.hooks.vcs.version-file = "src/scikit_build_core/_version.py"
 
 
 [tool.uv]
