@@ -116,10 +116,6 @@ class ScikitBuildHook(BuildHookInterface):  # type: ignore[type-arg]
         return [*cmake_requires, *requires.dynamic_metadata()]
 
     def initialize(self, version: str, build_data: dict[str, Any]) -> None:
-        if version == "editable":
-            msg = "Editable installs are not yet supported"
-            raise ValueError(msg)
-
         self.__tmp_dir = Path(tempfile.mkdtemp()).resolve()
         try:
             self._initialize(build_data=build_data)
